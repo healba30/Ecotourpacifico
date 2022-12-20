@@ -1,0 +1,49 @@
+
+
+<app-navr></app-navr>
+
+<ion-item>
+
+  <div [formGroup]="form">
+    <ion-item>
+      <ion-icon id="icon" name="person-outline"></ion-icon>
+      <ion-input placeholder="Nombre:" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-icon id="icon" name="person-outline"></ion-icon>
+      <ion-input placeholder="Apellido:" formControlName="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-icon id="icon" name="mail-outline"></ion-icon>
+      <ion-input placeholder="Email:" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-icon id="icon" name="call-outline"></ion-icon>
+      <ion-input placeholder="Telefono:" type="number" formControlName="telefono"></ion-input>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-icon id="icon" name="key-outline"></ion-icon>
+      <ion-input placeholder="Contraseña:" formControlName="password"></ion-input>
+    </ion-item>
+
+    <div id="item">
+      <ion-label id="item">Ya tienes una cuenta?  </ion-label>
+      <a id="navh" [routerLink]="['/']" routerLinkActive="router-link-active">inicia sessión</a>
+    </div>
+    <div>
+      <ion-item id="item">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Acepto los terminos y condiciones</ion-label>
+      </ion-item>
+    </div>
+    <div id="item">
+      <ion-button expand="block" (click)="onSave()" >Resitrar</ion-button>
+    </div>
+
+  </div>
+
+</ion-item>

@@ -1,0 +1,54 @@
+
+<app-nav></app-nav>
+  <ion-app>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Bienvenido</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-card>
+          <img id="imgh" alt="Silhouette of mountains" src="https://images.pexels.com/photos/4666753/pexels-photo-4666753.jpeg?auto=compress&cs=tinysrgb&w=600" />
+          <ion-card-header>
+            <ion-card-title>Avistamiento de ballenas</ion-card-title>
+            <ion-card-subtitle>conoce nuestros paquetes</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum semper felis nec aliquam. Nam tristique sollicitudin tristique. Proin ut urna at augue semper elementum sit amet quis ipsum. Mauris.
+          </ion-card-content>
+          <a [routerLink]="['/ballenas']" routerLinkActive="router-link-active">Saber más</a>
+        </ion-card>
+
+        <ion-card>
+          <img id="imgh" alt="Silhouette of mountains" src="https://images.pexels.com/photos/3816807/pexels-photo-3816807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Visita nuestras playas</ion-card-title>
+            <ion-card-subtitle>Conoce nuestros paquetes</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum semper felis nec aliquam. Nam tristique sollicitudin tristique. Proin ut urna at augue semper elementum sit amet quis ipsum. Mauris.
+          </ion-card-content>
+          <a [routerLink]="['/playas']" routerLinkActive="router-link-active">Saber más</a>
+        </ion-card>
+
+        <ion-card>
+          <img id="imgh" alt="Silhouette of mountains" src="https://images.pexels.com/photos/12266799/pexels-photo-12266799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Explora nuestros Balnearios</ion-card-title>
+            <ion-card-subtitle>Conoce nuestros paquetes</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum semper felis nec aliquam. Nam tristique sollicitudin tristique. Proin ut urna at augue semper elementum sit amet quis ipsum. Mauris.
+          </ion-card-content>
+          <a [routerLink]="['/balnearios']" routerLinkActive="router-link-active">Saber más</a>
+        </ion-card>
+      </ion-content>
+    </div>
+  </ion-app>

@@ -1,0 +1,40 @@
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home-outline"></ion-icon>
+        <a id="navr2" [routerLink]="['/home']" routerLinkActive="router-link-active">Bienvenido</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-add-outline"></ion-icon>
+        <a id="navr2" [routerLink]="['/registro']" routerLinkActive="router-link-active">Registrate</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <a id="navr2" [routerLink]="['/reserva']" routerLinkActive="router-link-active">Reservar</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call-outline"></ion-icon>
+        <a id="navr2" [routerLink]="['/contactos']" routerLinkActive="router-link-active">Contactanos</a>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Reservación</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+</div>

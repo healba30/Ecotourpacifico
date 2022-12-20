@@ -1,0 +1,43 @@
+<app-navr2></app-navr2>
+
+<div class="form1">
+  <ion-list id="item1">
+    <ion-item>
+      <ion-select interface="action-sheet" placeholder="Selecciona tu destino">
+        <ion-select-option value="apples">Avistamiento de ballenas</ion-select-option>
+        <ion-select-option value="oranges">Viajar a las Playas</ion-select-option>
+        <ion-select-option value="bananas">Visitar Reservas naturales</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item id="item1">
+    <ion-label>Dia y hora de llegada</ion-label>
+  </ion-item>
+    <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+    <ion-modal id="item1" [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+    <ion-item id="item1">
+      <ion-label>Dia y hora de Regreso</ion-label>
+    </ion-item>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal id="item1" [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      <ion-item id="item1">
+              <ion-input placeholder="Número de personas:"></ion-input>
+      </ion-item>
+      <ion-button expand="block">Reservar</ion-button>
+</div>
+
+
+
+
