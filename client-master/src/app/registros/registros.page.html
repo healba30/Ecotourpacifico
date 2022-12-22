@@ -1,4 +1,3 @@
-
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -38,52 +37,44 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Menu</ion-title>
+      <ion-title>Administrar</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
-  </ion-content>
-</div>
+<!-- -----------------------------Crud---------------------------------------------- -->
 
+<ion-content class="box">
+  <ion-list *ngFor="let registro of listaRegistros;">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>{{registro.id}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{registro.nombre}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{registro.apellido}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{registro.email}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{registro.telefono}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-item>
 
-<ion-app>
-  <div class="contac">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Contactos</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-card>
-      <img id="imgC" src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      <ion-card-header>
-        <ion-card-title>Contactos</ion-card-title>
-        <ion-card-subtitle>Buenaventura - Valle del Cauca</ion-card-subtitle>
+      <ion-item-options>
+        <ion-item-option>Favorite</ion-item-option>
+        <ion-item-option color="danger" >Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
-        <ion-item>
-          <ion-icon id="cont" name="call-outline"></ion-icon>
-          <ion-input value="320 456 6789" [disabled]="true"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-icon id="cont" name="mail-outline"></ion-icon>
-          <ion-input value="www.ecotourpacifico.com" [disabled]="true"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-icon id="cont" name="logo-facebook"></ion-icon>
-          <ion-icon id="cont" name="logo-instagram"></ion-icon>
-          <ion-icon id="cont" name="logo-youtube"></ion-icon>
-        </ion-item>
-      </ion-card-header>
+</ion-content>
 
-      <ion-card-content>
+<!-- (click)="eleminarReg(registro.id)" -->
 
-      </ion-card-content>
-    </ion-card>
-
-
-  </div>
-</ion-app>
 

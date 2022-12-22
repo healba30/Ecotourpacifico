@@ -1,49 +1,107 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/home']" routerLinkActive="router-link-active">Bienvenido</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-add-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/registro']" routerLinkActive="router-link-active">Registrate</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/reserva']" routerLinkActive="router-link-active">Reservar</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/contactos']" routerLinkActive="router-link-active">Contactanos</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="construct-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/registros']" routerLinkActive="router-link-active">Administración</a>
+      </ion-item>
 
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-<app-navr></app-navr>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    Tap the button in the toolbar to open the menu.
+  </ion-content>
+</div>
 
-<ion-item>
+  <ion-app>
+    <div class="formR">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Registro de usuarios</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-item>
 
-  <div [formGroup]="form">
-    <ion-item>
-      <ion-icon id="icon" name="person-outline"></ion-icon>
-      <ion-input placeholder="Nombre:" formControlName="nombre"></ion-input>
-    </ion-item>
+        <div [formGroup]="form">
+          <ion-item>
+            <ion-icon id="icon" name="person-outline"></ion-icon>
+            <ion-input placeholder="Nombre:" formControlName="nombre"></ion-input>
+          </ion-item>
 
-    <ion-item id="item">
-      <ion-icon id="icon" name="person-outline"></ion-icon>
-      <ion-input placeholder="Apellido:" formControlName="apellido"></ion-input>
-    </ion-item>
+          <ion-item id="item">
+            <ion-icon id="icon" name="person-outline"></ion-icon>
+            <ion-input placeholder="Apellido:" formControlName="apellido"></ion-input>
+          </ion-item>
 
-    <ion-item id="item">
-      <ion-icon id="icon" name="mail-outline"></ion-icon>
-      <ion-input placeholder="Email:" formControlName="email"></ion-input>
-    </ion-item>
+          <ion-item id="item">
+            <ion-icon id="icon" name="mail-outline"></ion-icon>
+            <ion-input placeholder="Email:" formControlName="email"></ion-input>
+          </ion-item>
 
-    <ion-item id="item">
-      <ion-icon id="icon" name="call-outline"></ion-icon>
-      <ion-input placeholder="Telefono:" type="number" formControlName="telefono"></ion-input>
-    </ion-item>
+          <ion-item id="item">
+            <ion-icon id="icon" name="call-outline"></ion-icon>
+            <ion-input placeholder="Telefono:" type="number" formControlName="telefono"></ion-input>
+          </ion-item>
 
-    <ion-item id="item">
-      <ion-icon id="icon" name="key-outline"></ion-icon>
-      <ion-input placeholder="Contraseña:" formControlName="password"></ion-input>
-    </ion-item>
+          <ion-item id="item">
+            <ion-icon id="icon" name="key-outline"></ion-icon>
+            <ion-input placeholder="Contraseña:" formControlName="password"></ion-input>
+          </ion-item>
 
-    <div id="item">
-      <ion-label id="item">Ya tienes una cuenta?  </ion-label>
-      <a id="navh" [routerLink]="['/']" routerLinkActive="router-link-active">inicia sessión</a>
-    </div>
-    <div>
-      <ion-item id="item">
-        <ion-checkbox slot="start"></ion-checkbox>
-        <ion-label>Acepto los terminos y condiciones</ion-label>
+          <div id="item">
+            <ion-label id="item">Ya tienes una cuenta?  </ion-label>
+            <a id="navh" [routerLink]="['/']" routerLinkActive="router-link-active">inicia sessión</a>
+          </div>
+          <div>
+            <ion-item id="item">
+              <ion-checkbox slot="start"></ion-checkbox>
+              <ion-label>Acepto los terminos y condiciones</ion-label>
+            </ion-item>
+          </div>
+          <div id="item">
+            <ion-button expand="block" (click)="onSave()" >Resitrar</ion-button>
+          </div>
+
+        </div>
+
       </ion-item>
     </div>
-    <div id="item">
-      <ion-button expand="block" (click)="onSave()" >Resitrar</ion-button>
-    </div>
+  </ion-app>
 
-  </div>
 
-</ion-item>
+

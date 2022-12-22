@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ReservaPageRoutingModule } from './reserva-routing.module';
 
 import { ReservaPage } from './reserva.page';
-import { Navr2Component } from './navr2/navr2.component';
+
 
 @NgModule({
   imports: [
@@ -16,6 +16,6 @@ import { Navr2Component } from './navr2/navr2.component';
     IonicModule,
     ReservaPageRoutingModule
   ],
-  declarations: [ReservaPage, Navr2Component]
+  declarations: [ReservaPage, ]
 })
 export class ReservaPageModule {}

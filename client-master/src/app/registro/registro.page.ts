@@ -3,6 +3,7 @@ import { Registro } from './../Modelos/registro';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class RegistroPage implements OnInit {
   public form!: FormGroup;
   public registro!: Registro;
   constructor(
-    public RegistroService: RegistroService
+    public RegistroService: RegistroService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -39,6 +41,10 @@ export class RegistroPage implements OnInit {
     this.registro = new Registro();
     this.registro.setValues(data);
     this.RegistroService.create(this.registro);
+    this.router.navigate(['home']);
   }
+
+
+
 
 }

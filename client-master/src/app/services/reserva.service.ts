@@ -9,8 +9,10 @@ import { Reserva } from '../Modelos/reserva';
 export class ReservaService {
   public urlServer = environment.url + '/reservas';
   constructor(public http: HttpClient) { }
+
   create(data: Reserva){
 
     return this.http.post<Reserva>(this.urlServer, data).subscribe(rest =>console.log(rest));
   }
+
 }

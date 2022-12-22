@@ -1,5 +1,52 @@
 
-<app-nav></app-nav>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/home']" routerLinkActive="router-link-active">Bienvenido</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-add-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/registro']" routerLinkActive="router-link-active">Registrate</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/reserva']" routerLinkActive="router-link-active">Reservar</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/contactos']" routerLinkActive="router-link-active">Contactanos</a>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="construct-outline"></ion-icon>
+        <a id="navh" [routerLink]="['/registros']" routerLinkActive="router-link-active">Administración</a>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    Tap the button in the toolbar to open the menu.
+  </ion-content>
+</div>
+
+
   <ion-app>
     <div class="ion-page" id="main-content">
       <ion-header>
@@ -25,7 +72,7 @@
         </ion-card>
 
         <ion-card>
-          <img id="imgh" alt="Silhouette of mountains" src="https://images.pexels.com/photos/3816807/pexels-photo-3816807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <img id="imgh" alt="Silhouette of mountains" src="https://travesia360.com/wp-content/uploads/2021/08/nuquiplayaaa-pro-colombia.jpg" />
           <ion-card-header>
             <ion-card-title>Visita nuestras playas</ion-card-title>
             <ion-card-subtitle>Conoce nuestros paquetes</ion-card-subtitle>

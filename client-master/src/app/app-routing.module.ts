@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'ballenas',
     loadChildren: () => import('./ballenas/ballenas.module').then( m => m.BallenasPageModule)
   },
+  {
+    path: 'registros',
+    loadChildren: () => import('./registros/registros.module').then( m => m.RegistrosPageModule)
+  },
 ];
 
 @NgModule({
